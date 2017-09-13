@@ -1,4 +1,4 @@
-ScriptPath="\\\\SERVER\\Alumnos\\Rigging\\Recursos\\Includes\\"
+ScriptPath="D:\\Development\\RMMS\\"
 
 filein (ScriptPath+"RMRiggOrder.ms")
 filein (ScriptPath+"RMNameConvention.ms")

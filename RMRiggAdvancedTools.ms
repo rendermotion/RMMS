@@ -1,4 +1,4 @@
-ScriptPath="\\\\SERVER\\Alumnos\\Rigging\\Recursos\\Includes\\"
+ScriptPath="D:\\Development\\RMMS\\"
 filein (ScriptPath+"RMRiggTools.ms")
 
 fn RMTwistBones TwistBone NumberOfTB:3=

@@ -1,0 +1,31 @@
+n=0
+Controles01 = $CIrculoControlT1_* as array
+CalamarSkl=$PuntoControl_Sin_01* as array
+Nelem=CalamarSkl.count
+for i in Controles01 do
+	(
+	Cpoint=-1.5*n
+	Dfin=decae/(decaeInicio-decae)-Cpoint/(decaeInicio-decae)
+	if (Cpoint > decae) and (Cpoint > decaeInicio) do
+		if(decae>decaeInicio) then
+			Dfin=0
+		else
+			Dfin=-1
+	if (Cpoint < decae) and (Cpoint < decaeInicio) do
+		if(decae<decaeInicio) then
+			Dfin=0
+		else
+			Dfin=-1
+	if(Londa!=0) do
+		(
+		Val=(Amplitud*sin((coordsys parent i.pos.y)/Londa*90+Fase*9+Anim)*Dfin)/2
+		coordsys parent i.pos.x=Amplitud*sin((coordsys parent i.pos.y)/Londa*90+Fase*9+Anim)*Dfin
+		)
+	coordsys parent i.pos.y=-1.5*n;
+	coordsys parent i.pos.z=0;
+	inc=((rotacionInicio-rotacionFin)/Nelem)*n
+	coordsys parent CalamarSkl[n+1].pos.y=Val*5*sin(rotacionInicio+inc)
+	coordsys parent CalamarSkl[n+1].pos.x=Val*5*cos(rotacionInicio+inc)
+	n+=1
+  	)
+[ -5,0, 0 ]
